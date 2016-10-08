@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     
     var horizontalCameraNode: SCNNode!
     var verticalCameraNode: SCNNode!
+    var ballNode: SCNNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,8 @@ class GameViewController: UIViewController {
                 true)!
         verticalCameraNode =
             scnScene.rootNode.childNode(withName: "VerticalCamera", recursively: true)!
+        ballNode =
+            scnScene.rootNode.childNode(withName: "Ball", recursively: true)!
     }
     
     func setupSounds() {}
